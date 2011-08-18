@@ -1,0 +1,5 @@
+
+*.suo
+/15puzzle/bin
+/15puzzle/obj
+/15puzzle/*.user
