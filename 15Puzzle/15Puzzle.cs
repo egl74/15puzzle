@@ -52,89 +52,99 @@ namespace _15Puzzle
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            processClick(0);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            processClick(1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            processClick(2);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            processClick(3);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            processClick(4);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            processClick(5);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            processClick(6);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            processClick(7);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            processClick(8);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            processClick(9);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-
+            processClick(10);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-
+            processClick(11);
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            processClick(12);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            processClick(13);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-
+            processClick(14);
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            processClick(15);
         }
 
         #endregion
 
         private void randomize_Click(object sender, EventArgs e)
         {
-
+            puzzle.Randomize();
+            Draw();
         }
+
+        private void processClick(int i)
+        {
+            directions dir = puzzle.CanSwapSlot(i);
+            if (dir != directions.nulldirection) puzzle.SwapSlot(i, dir);
+            Draw();
+            if (puzzle.IsPuzzleSolved()) output.Text = "You win! <3";
+        }
+
     }
 }

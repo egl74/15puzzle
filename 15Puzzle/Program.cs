@@ -5,8 +5,12 @@ using System.Windows.Forms;
 
 namespace _15Puzzle
 {
+
+    public enum directions { up, right, down, left, nulldirection };
+
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
